@@ -18,9 +18,12 @@ class Asset < ActiveRecord::Base
 end
 ```
 
-This repo contains the models in the example discussed in the documentation. Playing with it suggests that ActiveRecord
-already stores the base class of the provided model. This is ActiveRecord's behavior at least all the way up to version
-3.2.22.5. Previous versions might also support it, I just didn't test them.
+This repo contains the models in the example discussed in the documentation. Its DB is initialized with one `GuestPost`,
+one `MemberPost`, and one `Asset` which is assigned to the member post by doing `member_post.assets << asset`.
+
+Playing with this repo suggests that ActiveRecord already stores the base class of the provided model. This is
+ActiveRecord's behavior at least all the way up to version 3.2.22.5. Previous versions might also behave this way, I
+just didn't test them.
 
 To work with this repo:
   1. In the `Gemfile`, set the ActiveRecord version to the desired version. All available versions can be found [here]
