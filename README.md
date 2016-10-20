@@ -1,3 +1,7 @@
+### SOLVED
+The reasoning is now clear. See update section at the bottom.
+
+
 This repo exists to support [this Stack Overflow question] (http://stackoverflow.com/questions/40163087/is-it-really-necessary-to-override-the-type-method-for-activerecord-polymor).
 
 This repo can be used to test the way polymorphic associations in Rails behave with Single Table Inheritance.
@@ -39,3 +43,15 @@ To work with this repo:
   4. Execute `bin/run` in your terminal to run the auto-tester.
 
   5. Optionally, play with additional scenarios by running `bin/console`.
+
+### UPDATE
+It is needed to override the `attachable_type=` method when the model might accept attributes from a form.
+
+In such scenario, attachable_type and attachable_id are sent to the controller, which typically passes-through this
+data to the model. Without overriding `attachable_type=` the model will end up having `attachable_type` be one of the
+child classes `GuestPost` or `MemberPost`.
+
+This in turn causes a range of issues. For example, assets won't be destroyed when the owner of the asset is destroyed
+even when `dependent: :destroy` is specified on the `has_many` association.
+
+The auto-tester `bin/run` now demonstrates this issue.
