@@ -1,6 +1,7 @@
 ### SOLVED
 The reasoning is now clear. See update section at the bottom.
 
+### Original README
 
 This repo exists to support [this Stack Overflow question] (http://stackoverflow.com/questions/40163087/is-it-really-necessary-to-override-the-type-method-for-activerecord-polymor)
 and [this Github issue on the Rails repo] (https://github.com/rails/rails/issues/26849).
