@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require_relative '../environment'
+
+load File.expand_path('../../db/setup.rb', __FILE__)
+load File.expand_path('../../run.rb', __FILE__)

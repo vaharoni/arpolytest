@@ -1,0 +1,2 @@
+class GuestPost < Post
+end
