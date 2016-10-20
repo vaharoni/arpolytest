@@ -19,13 +19,18 @@ end
 ```
 
 This repo contains the models in the example discussed in the documentation. Playing with it suggests that ActiveRecord
-already stores the base class of the provided model, all the way up to ActiveRecord version 3.2.22.5 (previous versions
-might also support it, they were simply not tested).
+already stores the base class of the provided model. This is ActiveRecord's behavior at least all the way up to version
+3.2.22.5. Previous versions might also support it, I just didn't test them.
 
-Usage:
+To work with this repo:
   1. In the `Gemfile`, set the ActiveRecord version to the desired version. All available versions can be found [here]
   (https://rubygems.org/gems/activerecord/versions).
-  2. Execute `bin/run` in your terminal.
 
-To play with additional scenarios, run `bin/console` in your terminal.
+  2. Run `bundle/install`.
 
+  3. Optionally, consider uncommenting the `attachable_type=` in Asset. Currently it is commented out, i.e. you're
+  testing the scenario in which we do not heed the advice in the documentation.
+
+  4. Execute `bin/run` in your terminal to run the auto-tester.
+
+  5. Optionally, play with additional scenarios by running `bin/console`.
