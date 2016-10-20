@@ -1,3 +1,5 @@
+This repo exists to support [this Stack Overflow question] (http://stackoverflow.com/questions/40163087/is-it-really-necessary-to-override-the-type-method-for-activerecord-polymor).
+
 This repo can be used to test the way polymorphic associations in Rails behave with Single Table Inheritance.
 The motivation was the discussion in the documentation [here]
 (http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html#module-ActiveRecord::Associations::ClassMethods-label-Polymorphic+Associations).
