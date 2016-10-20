@@ -1,4 +1,4 @@
-### SOLVED
+### UPDATED
 The reasoning is now clear. See update section at the bottom.
 
 ### Original README
@@ -47,9 +47,9 @@ To work with this repo:
   5. Optionally, play with additional scenarios by running `bin/console`.
 
 ### UPDATE
-It is needed to override the `attachable_type=` method when the model might accept attributes from a form.
+We need to override the `attachable_type=` method when the model might accept attributes from a form.
 
-In such scenario, attachable_type and attachable_id are sent to the controller, which typically passes-through this
+In such scenario, `attachable_type` and `attachable_id` are sent to the controller, which typically passes-through this
 data to the model. Without overriding `attachable_type=` the model will end up having `attachable_type` be one of the
 child classes `GuestPost` or `MemberPost`.
 
