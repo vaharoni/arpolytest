@@ -2,7 +2,8 @@
 The reasoning is now clear. See update section at the bottom.
 
 
-This repo exists to support [this Stack Overflow question] (http://stackoverflow.com/questions/40163087/is-it-really-necessary-to-override-the-type-method-for-activerecord-polymor).
+This repo exists to support [this Stack Overflow question] (http://stackoverflow.com/questions/40163087/is-it-really-necessary-to-override-the-type-method-for-activerecord-polymor)
+and [this Github issue on the Rails repo] (https://github.com/rails/rails/issues/26849).
 
 This repo can be used to test the way polymorphic associations in Rails behave with Single Table Inheritance.
 The motivation was the discussion in the documentation [here]
